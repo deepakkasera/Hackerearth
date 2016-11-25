@@ -26,12 +26,12 @@ int kmp(string s,string p){
     while(i<n)
     {
     	if(s[i] == p[j]){
-    		if(j==m-1) count++;
+    		if(j == m-1) count++;
     		i++;
     		j++;
     	}
     	else if (j!=0) j=v[j-1];
-    	else i++;
+    	else  i++;
      }
     return count;
  }
@@ -40,6 +40,6 @@ int main(int argc, char const *argv[])
 	string p,s;
 	cin>>p>>s;
 	int ans = kmp(s,p);
-	cout << ans;	
+	cout << ans <<"\n";	
 	return 0;
 }
